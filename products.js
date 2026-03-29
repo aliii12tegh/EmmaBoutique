@@ -54,19 +54,21 @@ const productsList = [
     price: 230,
     currency: 'DH',
     description: 'سروال عريض ومريح بتصميم عصري يناسب إطلالتك اليومية.',
-    mainImage: 'product_3/Gemini_Generated_Image_fgjc29fgjc29fgjc.png',
+    mainImage: 'product_3/virtual-try-on-result(26).png',
     images: [
+      'product_3/virtual-try-on-result(26).png',
       'product_3/Gemini_Generated_Image_fgjc29fgjc29fgjc.png',
       'product_3/Gemini_Generated_Image_jrku8kjrku8kjrku.png',
       'product_3/Gemini_Generated_Image_rv5rgrrv5rgrrv5r.png',
       'product_3/WhatsApp Image 2026-03-29 at 15.05.07.jpeg',
-      'product_3/virtual-try-on-result(26).png'
+      'product_3/black-pantalon.png'
     ],
     colors: [
+      { name: 'كحلي', hex: '#1E2A4A', image: 'product_3/virtual-try-on-result(26).png' },
       { name: 'أزرق فاتح', hex: '#A8C4E0', image: 'product_3/Gemini_Generated_Image_fgjc29fgjc29fgjc.png' },
       { name: 'بيج', hex: '#B8A99A', image: 'product_3/Gemini_Generated_Image_jrku8kjrku8kjrku.png' },
       { name: 'أبيض كريمي', hex: '#EDE8DF', image: 'product_3/Gemini_Generated_Image_rv5rgrrv5rgrrv5r.png' },
-      { name: 'كحلي', hex: '#1E2A4A', image: 'product_3/WhatsApp Image 2026-03-29 at 15.05.07.jpeg' }
+      { name: 'أسود', hex: '#1C1C1C', image: 'product_3/black-pantalon.png' }
     ],
     sizes: ['Standard'],
     badge: 'حصري',
