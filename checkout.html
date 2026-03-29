@@ -264,20 +264,20 @@
         const finalPrice = productPrice + parseFloat(shippingInput.value);
 
         // Generate Whatsapp message
-        let itemsText = cartItems.map(item => `- ${item.quantity}x ${item.name} (${item.size}, ${item.color}) - ${item.price}dh`).join('\\n');
+        let itemsText = cartItems.map(item => `• ${item.quantity}x ${item.name} (${item.size}, ${item.color}) - ${item.price}dh`).join('\n');
 
-        const msg = `Nouvelle Commande / طلب جديد
-        
-Détails des produits / تفاصيل المنتجات:
+        const msg = `🛒 *Nouvelle Commande / طلب جديد*
+
+📦 *Détails des produits / تفاصيل المنتجات:*
 ${itemsText}
 
-Informations de livraison / معلومات التوصيل:
-- Nom: ${nom}
-- Téléphone: ${phone}
-- Ville: ${ville} (${shippingName})
-- Adresse: ${adresse}
+🚚 *Informations de livraison / معلومات التوصيل:*
+• Nom: ${nom}
+• Téléphone: ${phone}
+• Ville: ${ville} (${shippingName})
+• Adresse: ${adresse}
 
-Total à payer / المجموع: *${finalPrice.toFixed(2)} dh*`;
+💰 *Total à payer / المجموع: ${finalPrice.toFixed(2)} dh*`;
 
         const whatsappUrl = `https://wa.me/212770667836?text=${encodeURIComponent(msg)}`;
         
