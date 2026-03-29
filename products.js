@@ -14,12 +14,12 @@ const productsList = [
       'product_1/virtual-try-on-result(27).png'
     ],
     colors: [
-      { name: 'أخضر باستيل', hex: '#A1B7A7', image: 'product_1/veste.jpg' },
-      { name: 'بيج فاتح', hex: '#D1C7B7', image: 'product_1/virtual-try-on-result(3).png' },
-      { name: 'أخضر ليموني', hex: '#DDF7A1', image: 'product_1/virtual-try-on-result(5).png' },
-      { name: 'رمادي', hex: '#9E9E9E', image: 'product_1/virtual-try-on-result(27).png' }
+      { name: 'اللون 1', hex: '#333333', image: 'product_1/veste.jpg' },
+      { name: 'اللون 2', hex: '#666666', image: 'product_1/virtual-try-on-result(3).png' },
+      { name: 'اللون 3', hex: '#999999', image: 'product_1/virtual-try-on-result(5).png' },
+      { name: 'اللون 4', hex: '#CCCCCC', image: 'product_1/virtual-try-on-result(27).png' }
     ],
-    sizes: ['S', 'M', 'L', 'XL'],
+    sizes: ['Standard'],
     badge: 'طراز جديد',
     badgeColor: 'secondary',
     availability: 'متوفر حالياً',
@@ -40,11 +40,13 @@ const productsList = [
       'product_2/virtual-try-on-result(30).png'
     ],
     colors: [
-      { name: 'أخضر زمردي', hex: '#0B4738', image: 'product_2/virtual-try-on-result(6).png' },
-      { name: 'أصفر ذهبي', hex: '#CBA135', image: 'product_2/virtual-try-on-result(8).png' },
-      { name: 'أزرق داكن', hex: '#1C2E4A', image: 'product_2/virtual-try-on-result(30).png' }
+      { name: 'اللون 1', hex: '#333333', image: 'product_2/Untitled design(1).png' },
+      { name: 'اللون 2', hex: '#555555', image: 'product_2/virtual-try-on-result(14).png' },
+      { name: 'اللون 3', hex: '#777777', image: 'product_2/virtual-try-on-result(6).png' },
+      { name: 'اللون 4', hex: '#999999', image: 'product_2/virtual-try-on-result(8).png' },
+      { name: 'اللون 5', hex: '#BBBBBB', image: 'product_2/virtual-try-on-result(30).png' }
     ],
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    sizes: ['Standard'],
     badge: 'الأكثر طلباً',
     badgeColor: 'primary',
     availability: 'مخزون محدود',
@@ -65,13 +67,13 @@ const productsList = [
       'product_3/virtual-try-on-result(26).png'
     ],
     colors: [
-      { name: 'تشكيلة 1', hex: '#1C1C1C', image: 'product_3/Gemini_Generated_Image_fgjc29fgjc29fgjc.png' },
-      { name: 'تشكيلة 2', hex: '#D7CCC8', image: 'product_3/Gemini_Generated_Image_jrku8kjrku8kjrku.png' },
-      { name: 'تشكيلة 3', hex: '#BCAAA4', image: 'product_3/Gemini_Generated_Image_rv5rgrrv5rgrrv5r.png' },
-      { name: 'تشكيلة 4', hex: '#D2B48C', image: 'product_3/WhatsApp Image 2026-03-29 at 15.05.07.jpeg' },
-      { name: 'تشكيلة 5', hex: '#8F9779', image: 'product_3/virtual-try-on-result(26).png' }
+      { name: 'اللون 1', hex: '#333333', image: 'product_3/Gemini_Generated_Image_fgjc29fgjc29fgjc.png' },
+      { name: 'اللون 2', hex: '#555555', image: 'product_3/Gemini_Generated_Image_jrku8kjrku8kjrku.png' },
+      { name: 'اللون 3', hex: '#777777', image: 'product_3/Gemini_Generated_Image_rv5rgrrv5rgrrv5r.png' },
+      { name: 'اللون 4', hex: '#999999', image: 'product_3/WhatsApp Image 2026-03-29 at 15.05.07.jpeg' },
+      { name: 'اللون 5', hex: '#BBBBBB', image: 'product_3/virtual-try-on-result(26).png' }
     ],
-    sizes: ['S', 'M', 'L', 'XL'],
+    sizes: ['Standard'],
     badge: 'حصري',
     badgeColor: 'secondary',
     availability: 'متوفر',
@@ -93,12 +95,14 @@ const productsList = [
       'product_4/virtual-try-on-result(24).png'
     ],
     colors: [
-      { name: 'أبيض', hex: '#FFFFFF', image: 'product_4/WhatsApp Image 2026-03-29 at 14.47.04.jpeg' },
-      { name: 'أزرق', hex: '#5b92e5', image: 'product_4/virtual-try-on-result(22).png' },
-      { name: 'أخضر', hex: '#8F9779', image: 'product_4/virtual-try-on-result(23).png' },
-      { name: 'وردي', hex: '#E6B0AA', image: 'product_4/virtual-try-on-result(24).png' }
+      { name: 'اللون 1', hex: '#222222', image: 'product_4/WhatsApp Image 2026-03-29 at 14.47.04.jpeg' },
+      { name: 'اللون 2', hex: '#444444', image: 'product_4/WhatsApp Image 2026-03-29 at 14.51.19 (1).jpeg' },
+      { name: 'اللون 3', hex: '#666666', image: 'product_4/WhatsApp Image 2026-03-29 at 14.51.19.jpeg' },
+      { name: 'اللون 4', hex: '#888888', image: 'product_4/virtual-try-on-result(22).png' },
+      { name: 'اللون 5', hex: '#AAAAAA', image: 'product_4/virtual-try-on-result(23).png' },
+      { name: 'اللون 6', hex: '#CCCCCC', image: 'product_4/virtual-try-on-result(24).png' }
     ],
-    sizes: ['S', 'M', 'L', 'XL'],
+    sizes: ['Standard'],
     badge: 'جديد',
     badgeColor: 'secondary',
     availability: 'متوفر',
@@ -116,10 +120,10 @@ const productsList = [
       'product_5/virtual-try-on-result(17).png'
     ],
     colors: [
-      { name: 'بيج', hex: '#F5F5DC', image: 'product_5/WhatsApp Image 2026-03-29 at 14.37.26.jpeg' },
-      { name: 'أزرق فاتح', hex: '#ADD8E6', image: 'product_5/virtual-try-on-result(17).png' }
+      { name: 'اللون 1', hex: '#333333', image: 'product_5/WhatsApp Image 2026-03-29 at 14.37.26.jpeg' },
+      { name: 'اللون 2', hex: '#999999', image: 'product_5/virtual-try-on-result(17).png' }
     ],
-    sizes: ['S', 'M', 'L', 'XL'],
+    sizes: ['Standard'],
     badge: 'عرض خاص',
     badgeColor: 'primary',
     availability: 'متوفر',
