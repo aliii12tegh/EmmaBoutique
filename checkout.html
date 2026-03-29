@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Emma Boutique | Paiement à la livraison</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8f8f8;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    
+    /* Custom radio styling for shipping */
+    input[type="radio"]:checked + div {
+      border-color: #0076bb;
+    }
+    input[type="radio"]:checked + div .radio-dot {
+      border-color: #0076bb;
+    }
+    input[type="radio"]:checked + div .radio-dot::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 8px;
+      height: 8px;
+      background-color: #0076bb;
+      border-radius: 50%;
+    }
+    
+    /* Hide scrollbar for cleaner look */
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-0 sm:p-4 md:p-10">
+
+  <!-- Main Modal Container -->
+  <div class="bg-white w-full max-w-5xl rounded-lg shadow-xl overflow-hidden relative border border-gray-200 flex flex-col max-h-screen sm:max-h-[85vh]">
+      
+    <!-- Header -->
+    <div class="px-6 py-4 border-b border-gray-200 flex items-center justify-between sticky top-0 bg-white z-10">
+        <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-black font-semibold">home</span>
+            <h1 class="uppercase font-bold text-lg tracking-wide text-black m-0">COMMANDE AVEC PAIEMENT À LA LIVRAISON</h1>
+        </div>
+        <button onclick="window.location.href='code.html'" class="text-black hover:bg-gray-100 p-1 rounded transition-colors" title="Fermer | إغلاق">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+    </div>
+
+    <!-- Scrollable Content -->
+    <div class="flex flex-col md:flex-row flex-1 overflow-y-auto w-full">
+        
+        <!-- Left Column: Form -->
+        <div class="w-full md:w-3/5 p-6 md:p-8 flex-col space-y-8">
+            
+            <form id="checkout-form" class="space-y-8 h-full flex flex-col">
+                
+                <!-- Shipping Address -->
+                <div class="space-y-4">
+                    <h2 class="font-bold text-[17px] text-black">Insérez votre adresse de livraison</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- Nom complet -->
+                        <div class="space-y-1">
+                            <label class="text-[13px] font-semibold text-black tracking-tight" for="nom">Nom complet | <span class="text-sm font-medium" dir="rtl">الاسم الكامل</span> <span class="text-red-500">*</span></label>
+                            <div class="relative bg-white border border-gray-300 rounded focus-within:border-black focus-within:ring-1 focus-within:ring-black overflow-hidden flex items-center shadow-sm">
+                                <span class="material-symbols-outlined text-gray-500 text-lg px-3">person</span>
+                                <input required type="text" id="nom" class="w-full py-2.5 px-0 text-sm font-normal text-gray-800 placeholder-gray-400 border-none outline-none focus:ring-0" placeholder="Nom complet | الاسم الكامل">
+                            </div>
+                        </div>
+                        
+                        <!-- Telephone -->
+                        <div class="space-y-1">
+                            <label class="text-[13px] font-semibold text-black tracking-tight" for="phone">Téléphone | <span class="text-sm font-medium" dir="rtl">الهاتف</span> <span class="text-red-500">*</span></label>
+                            <div class="relative bg-white border border-gray-300 rounded focus-within:border-black focus-within:ring-1 focus-within:ring-black overflow-hidden flex items-center shadow-sm">
+                                <span class="material-symbols-outlined text-gray-500 text-lg px-3">call</span>
+                                <input required type="tel" id="phone" class="w-full py-2.5 px-0 text-sm font-normal text-gray-800 placeholder-gray-400 border-none outline-none focus:ring-0" placeholder="Téléphone | الهاتف">
+                            </div>
+                        </div>
+                        
+                        <!-- Ville -->
+                        <div class="space-y-1">
+                            <label class="text-[13px] font-semibold text-black tracking-tight" for="ville">Ville | <span class="text-sm font-medium" dir="rtl">المدينة</span> <span class="text-red-500">*</span></label>
+                            <div class="relative bg-white border border-gray-300 rounded focus-within:border-black focus-within:ring-1 focus-within:ring-black overflow-hidden flex items-center shadow-sm">
+                                <span class="material-symbols-outlined text-gray-500 text-lg px-3">location_on</span>
+                                <input required type="text" id="ville" class="w-full py-2.5 px-0 text-sm font-normal text-gray-800 placeholder-gray-400 border-none outline-none focus:ring-0" placeholder="Ville | المدينة">
+                            </div>
+                        </div>
+
+                        <!-- Adresse -->
+                        <div class="space-y-1">
+                            <label class="text-[13px] font-semibold text-black tracking-tight" for="adresse">Adresse | <span class="text-sm font-medium" dir="rtl">العنوان</span> <span class="text-red-500">*</span></label>
+                            <div class="relative bg-white border border-gray-300 rounded focus-within:border-black focus-within:ring-1 focus-within:ring-black overflow-hidden flex items-center shadow-sm">
+                                <span class="material-symbols-outlined text-gray-500 text-lg px-3">location_on</span>
+                                <input required type="text" id="adresse" class="w-full py-2.5 px-0 text-sm font-normal text-gray-800 placeholder-gray-400 border-none outline-none focus:ring-0" placeholder="Adresse | العنوان">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Divider -->
+                <hr class="border-t border-gray-200">
+
+                <!-- Mode de livraison -->
+                <div class="space-y-4 pb-10 flex-grow">
+                    <h2 class="font-bold text-[17px] text-black">Mode de livraison</h2>
+                    
+                    <div class="space-y-3">
+                        <!-- Option 1: Oujda -->
+                        <label class="block relative cursor-pointer group">
+                            <input type="radio" name="shipping" value="25" class="absolute opacity-0 w-0 h-0" checked onchange="updateTotal()">
+                            <div class="flex items-center justify-between border border-gray-300 rounded-md p-4 transition-colors group-hover:bg-gray-50 bg-white h-16 shadow-sm">
+                                <div class="flex items-center gap-4">
+                                    <div class="radio-dot w-5 h-5 rounded-full border border-gray-300 relative bg-white"></div>
+                                    <span class="font-bold text-[15px] tracking-tight">OUJDA | <span dir="rtl" class="font-semibold text-lg">وجدة</span></span>
+                                </div>
+                                <span class="text-[15px] font-medium text-gray-700">25.00 dh</span>
+                            </div>
+                        </label>
+
+                        <!-- Option 2: Hors Oujda -->
+                        <label class="block relative cursor-pointer group">
+                            <input type="radio" name="shipping" value="40" class="absolute opacity-0 w-0 h-0" onchange="updateTotal()">
+                            <div class="flex items-center justify-between border border-gray-300 rounded-md p-4 transition-colors group-hover:bg-gray-50 bg-white h-16 shadow-sm">
+                                <div class="flex items-center gap-4">
+                                    <div class="radio-dot w-5 h-5 rounded-full border border-gray-300 relative bg-white"></div>
+                                    <span class="font-bold text-[15px] tracking-tight">Extérieure Oujda | <span dir="rtl" class="font-semibold text-lg">خارج وجدة</span></span>
+                                </div>
+                                <span class="text-[15px] font-medium text-gray-700">40.00 dh</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Hidden button to submit form naturally, actual visible button is sticky at bottom -->
+                <button type="submit" id="hidden-submit" class="hidden"></button>
+
+            </form>
+        </div>
+
+        <!-- Right Column: Summary -->
+        <div class="w-full md:w-2/5 p-6 md:p-8 bg-white md:bg-gray-50 border-l border-none md:border-solid border-gray-200">
+            <div id="product-summary" class="bg-white border border-gray-200 rounded-md p-4 mb-6 relative space-y-4">
+                <!-- Fallback Loading -->
+                <div class="text-center py-4 text-sm text-gray-500">Chargement...</div>
+            </div>
+
+            <div class="bg-[#e4e4e4] rounded-md p-5 space-y-3 font-medium text-black">
+                <div class="flex justify-between items-center text-[15px]">
+                    <span>Sous-total</span>
+                    <span id="subtotal">0.00 dh</span>
+                </div>
+                <div class="flex justify-between items-center text-[15px]">
+                    <span>Livraison</span>
+                    <span id="shipping-cost">25.00 dh</span>
+                </div>
+                <hr class="border-t border-gray-300 my-2">
+                <div class="flex justify-between items-center text-lg font-bold">
+                    <span>Total</span>
+                    <span id="final-total">0.00 dh</span>
+                </div>
+            </div>
+            
+            <div class="mt-6 flex items-start gap-3">
+               <input type="checkbox" id="newsletter" class="mt-1 rounded border-gray-300 text-black focus:ring-black cursor-pointer">
+               <label for="newsletter" class="text-sm font-medium text-gray-800 cursor-pointer">
+                   Inscrivez-vous pour recevoir des communications sur les nouveaux produits et offres ! <br>
+                   <span dir="rtl" class="text-sm">سجل لتلقي عروضنا ومنتجاتنا الجديدة!</span>
+               </label>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Sticky Footer Button -->
+    <div class="w-full bg-black">
+        <button onclick="document.getElementById('hidden-submit').click()" class="w-full text-white text-[17px] font-bold py-5 hover:bg-gray-900 transition-colors flex items-center justify-center gap-2">
+            Terminez votre achat - <span id="btn-total">0.00</span> dh
+        </button>
+    </div>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="cart.js"></script>
+  <script src="products.js"></script>
+  <script>
+    let productPrice = 0;
+    
+    document.addEventListener("DOMContentLoaded", () => {
+      const cartItems = cartManager.getCart();
+      const summaryContainer = document.getElementById('product-summary');
+
+      if (!cartItems || cartItems.length === 0) {
+        summaryContainer.innerHTML = `<div class="text-red-500 text-center py-4 font-bold text-sm">Votre panier est vide.</div>`;
+        return;
+      }
+
+      window.renderCart = () => {
+          const items = cartManager.getCart();
+          if (!items || items.length === 0) {
+            summaryContainer.innerHTML = `<div class="text-red-500 text-center py-4 font-bold text-sm">Votre panier est vide.</div>`;
+            productPrice = 0;
+            updateTotal();
+            return;
+          }
+          productPrice = cartManager.getSubtotal();
+          
+          summaryContainer.innerHTML = items.map((item, index) => `
+            <div class="flex items-start gap-4 border-b border-gray-100 pb-4 last:border-0 last:pb-0 relative">
+                <div class="relative">
+                    <img src="${item.mainImage}" alt="${item.name}" class="w-16 h-20 object-cover rounded shadow-sm border border-gray-200">
+                    <span class="absolute -top-2 -right-2 bg-gray-500 text-white text-[10px] w-5 h-5 flex items-center justify-center rounded-full font-bold">${item.quantity}</span>
+                </div>
+                <div class="flex-1 space-y-1 mt-1 pr-6">
+                    <h3 class="font-bold text-[13px] uppercase tracking-wide leading-tight">${item.name}</h3>
+                    <p class="text-[13px] text-gray-600 font-medium">${item.size} | ${item.color}</p>
+                    <div class="flex items-center gap-3">
+                        <span class="font-bold text-[14px]">${item.price.toFixed(2)} dh</span>
+                    </div>
+                </div>
+                <button type="button" onclick="removeCartItem(${index})" class="absolute top-0 right-0 text-red-500 hover:text-red-700 bg-white border border-gray-200 rounded p-[2px] transition-colors flex items-center justify-center shadow-sm">
+                    <span class="material-symbols-outlined text-[16px]">delete</span>
+                </button>
+            </div>
+          `).join('');
+          updateTotal();
+      };
+
+      window.removeCartItem = (index) => {
+          cartManager.removeItem(index);
+          cartManager.updateCartUI();
+          renderCart();
+      };
+
+      renderCart();
+
+      // Form Submit
+      const form = document.getElementById('checkout-form');
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const nom = document.getElementById('nom').value;
+        const phone = document.getElementById('phone').value;
+        const ville = document.getElementById('ville').value;
+        const adresse = document.getElementById('adresse').value;
+        
+        const shippingInput = document.querySelector('input[name="shipping"]:checked');
+        const shippingName = shippingInput.value === "25" ? "Oujda" : "Extérieure Oujda";
+        const finalPrice = productPrice + parseFloat(shippingInput.value);
+
+        // Generate Whatsapp message
+        let itemsText = cartItems.map(item => `- ${item.quantity}x ${item.name} (${item.size}, ${item.color}) - ${item.price}dh`).join('\\n');
+
+        const msg = `Nouvelle Commande / طلب جديد
+        
+Détails des produits / تفاصيل المنتجات:
+${itemsText}
+
+Informations de livraison / معلومات التوصيل:
+- Nom: ${nom}
+- Téléphone: ${phone}
+- Ville: ${ville} (${shippingName})
+- Adresse: ${adresse}
+
+Total à payer / المجموع: *${finalPrice.toFixed(2)} dh*`;
+
+        const whatsappUrl = `https://wa.me/212659747282?text=${encodeURIComponent(msg)}`;
+        
+        // Clear cart after checkout initiation
+        cartManager.clearCart();
+        
+        // Temporarily change button text for feedback
+        const btnText = document.querySelector('.bg-black .w-full');
+        const originalText = btnText.innerHTML;
+        btnText.innerHTML = "Traitement... | جاري الإرسال...";
+        
+        setTimeout(() => {
+            window.location.href = whatsappUrl;
+        }, 500);
+      });
+    });
+
+    function updateTotal() {
+        if(productPrice === 0) return;
+        const shippingCost = parseFloat(document.querySelector('input[name="shipping"]:checked').value);
+        const finalTotal = productPrice + shippingCost;
+        
+        document.getElementById('subtotal').innerText = `${productPrice.toFixed(2)} dh`;
+        document.getElementById('shipping-cost').innerText = `${shippingCost.toFixed(2)} dh`;
+        document.getElementById('final-total').innerText = `${finalTotal.toFixed(2)} dh`;
+        document.getElementById('btn-total').innerText = `${finalTotal.toFixed(2)}`;
+    }
+  </script>
+</body>
+</html>

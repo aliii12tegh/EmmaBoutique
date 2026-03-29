@@ -1,0 +1,331 @@
+l'autorisation
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Emma Boutique | تفاصيل المنتج</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&amp;family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "tertiary": "#735c00",
+            "secondary-container": "#fed488",
+            "on-error-container": "#93000a",
+            "on-background": "#1a1c19",
+            "surface": "#fafaf5",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary": "#ffffff",
+            "tertiary-fixed": "#ffe088",
+            "on-tertiary-container": "#4e3d00",
+            "background": "#fafaf5",
+            "outline-variant": "#bfc9be",
+            "on-secondary-fixed": "#261900",
+            "inverse-on-surface": "#f1f1ec",
+            "inverse-surface": "#2f312e",
+            "primary": "#004824",
+            "on-tertiary-fixed-variant": "#574500",
+            "primary-container": "#006233",
+            "surface-container": "#eeeee9",
+            "tertiary-container": "#cba72f",
+            "surface-container-high": "#e8e8e3",
+            "tertiary-fixed-dim": "#e9c349",
+            "secondary-fixed": "#ffdea5",
+            "surface-container-low": "#f4f4ef",
+            "primary-fixed-dim": "#86d89d",
+            "secondary-fixed-dim": "#e9c176",
+            "surface-container-highest": "#e3e3de",
+            "on-error": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "on-primary-fixed": "#00210d",
+            "inverse-primary": "#86d89d",
+            "on-surface": "#1a1c19",
+            "on-surface-variant": "#3f4940",
+            "error": "#ba1a1a",
+            "primary-fixed": "#a1f5b7",
+            "secondary": "#775a19",
+            "on-primary": "#ffffff",
+            "on-secondary-fixed-variant": "#5d4201",
+            "surface-dim": "#dadad5",
+            "error-container": "#ffdad6",
+            "surface-tint": "#146c3c",
+            "on-tertiary-fixed": "#241a00",
+            "surface-variant": "#e3e3de",
+            "surface-bright": "#fafaf5",
+            "on-primary-container": "#89dba0",
+            "on-secondary-container": "#785a1a",
+            "outline": "#6f7a70",
+            "on-primary-fixed-variant": "#00522a"
+          },
+          fontFamily: {
+            "headline": ["Noto Serif"],
+            "body": ["Be Vietnam Pro"],
+            "label": ["Be Vietnam Pro"]
+          },
+          borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+        },
+      },
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Be Vietnam Pro', sans-serif;
+      background-color: #fafaf5;
+      color: #1a1c19;
+    }
+
+    .serif-headline {
+      font-family: 'Noto Serif', serif;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    /* Product Custom Styles */
+    .color-swatch.selected {
+      border: 2px solid #004824;
+      padding: 2px;
+    }
+
+    .size-btn.selected {
+      background-color: #004824;
+      color: white;
+      border-color: #004824;
+    }
+  </style>
+</head>
+
+<body class="bg-surface">
+
+  <!-- Shared TopNavBar -->
+  <header class="fixed top-0 w-full z-50 bg-[#fafaf5] shadow-sm">
+    <div class="flex justify-between items-center w-full px-6 py-2 max-w-7xl mx-auto">
+      <div>
+        <a href="code.html"><img src="logo.png" alt="Emma Boutique"
+            class="h-16 mix-blend-multiply scale-110 object-contain" /></a>
+      </div>
+      <div class="flex items-center gap-4">
+        <button onclick="window.location.href='checkout.html'"
+          class="text-[#004824] scale-95 active:scale-90 duration-200 relative">
+          <span class="material-symbols-outlined mt-1" data-icon="shopping_bag"
+            style="font-size: 28px;">shopping_bag</span>
+          <!-- Cart Badge -->
+          <span
+            class="cart-badge absolute -top-1 -right-1 bg-red-600 text-white text-[10px] w-5 h-5 flex items-center justify-center rounded-full font-bold transition-transform scale-100"
+            style="display: none;">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-[100px] mb-20 max-w-7xl mx-auto px-6">
+    <!-- Detailed Product Section -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-10" id="product-container">
+
+      <!-- Loading State (Fallback if id not found or slow) -->
+      <div id="loading" class="col-span-full text-center py-20">
+        <span class="material-symbols-outlined animate-spin text-4xl text-primary">autorenew</span>
+        <p class="mt-4 text-on-surface-variant">جاري تحميل المنتج...</p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Shared Footer -->
+  <footer class="w-full mt-20 bg-[#fafaf5] border-t border-[#006233]/5 dark:bg-stone-950">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 px-8 py-16 max-w-7xl mx-auto text-right">
+      <div class="flex flex-col gap-4 text-right justify-center items-end">
+        <img src="logo.png" alt="Emma Boutique" class="h-20 mix-blend-multiply object-contain scale-110 ml-auto" />
+      </div>
+      <div class="flex flex-col gap-4 justify-center">
+        <h4 class="font-bold text-primary">روابط سريعة</h4>
+        <ul class="flex flex-col gap-2 text-sm text-[#3f4940]">
+          <li><a class="hover:text-[#775a19] underline-offset-4 hover:underline" href="#">سياسة الخصوصية</a></li>
+          <li><a class="hover:text-[#775a19] underline-offset-4 hover:underline" href="#">اتصل بنا</a></li>
+        </ul>
+        <p class="text-xs text-on-surface-variant font-body mt-4">جميع الحقوق محفوظة © 2024 متجرنا للملابس المغربية</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Include product data & cart scripts -->
+  <script src="cart.js"></script>
+  <script src="products.js"></script>
+
+  <!-- Product Logic -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const productId = urlParams.get('id') || 1; // Default to 1 if not set
+      const product = getProductById(productId);
+      const container = document.getElementById('product-container');
+
+      if (!product) {
+        container.innerHTML = `<div class="col-span-full text-center py-20">
+            <h2 class="text-2xl font-bold text-error">عذراً، هذا المنتج غير موجود</h2>
+            <a href="code.html" class="inline-block mt-4 text-primary font-bold underline">العودة للرئيسية</a>
+        </div>`;
+        return;
+      }
+
+      // State
+      let selectedColor = product.colors[0]?.name || '';
+      let selectedSize = '';
+      let currentMainImage = product.mainImage;
+
+      // Render product
+      function render() {
+        // Image Gallery HTML
+        let thumbnailsHtml = product.images.map(img => `
+          <button class="w-20 h-24 border ${img === currentMainImage ? 'border-primary' : 'border-outline-variant'} rounded-sm overflow-hidden" onclick="changeMainImage('${img}')">
+            <img src="${img}" class="w-full h-full object-cover" />
+          </button>
+        `).join('');
+
+        // Color Swatches HTML
+        let colorsHtml = product.colors.map(color => `
+          <button class="color-swatch w-10 h-10 rounded-full flex items-center justify-center transition-all ${selectedColor === color.name ? 'selected' : ''}" 
+                  onclick="selectColor('${color.name}')" 
+                  title="${color.name}">
+            <span class="w-8 h-8 rounded-full shadow-inner border border-black/10 block" style="background-color: ${color.hex}"></span>
+          </button>
+        `).join('');
+
+        // Sizes HTML
+        let sizesHtml = product.sizes.map(size => `
+          <button class="size-btn border border-outline-variant rounded-sm py-2 px-4 transition-all hover:border-primary ${selectedSize === size ? 'selected' : ''}"
+                  onclick="selectSize('${size}')">
+            ${size}
+          </button>
+        `).join('');
+
+        // Custom sizes removed
+
+        container.innerHTML = `
+          <!-- Image Gallery -->
+          <div class="flex flex-col gap-4 relative">
+            ${product.badge ? `<span class="absolute top-4 right-4 z-10 bg-${product.badgeColor} text-white px-3 py-1 text-[10px] font-bold uppercase tracking-widest">${product.badge}</span>` : ''}
+            <div class="aspect-[3/4] bg-surface-container-low rounded-md overflow-hidden">
+                <img id="main-product-image" src="${currentMainImage}" class="w-full h-full object-cover" alt="${product.name}"/>
+            </div>
+            ${product.images.length > 1 ? `<div class="flex gap-4 overflow-x-auto py-2">${thumbnailsHtml}</div>` : ''}
+          </div>
+
+          <!-- Product Info -->
+          <div class="flex flex-col gap-6 pt-4 text-right">
+            <div>
+              <p class="text-sm text-on-surface-variant mb-2">الرئيسية > منتجاتنا > ${product.name}</p>
+              <h1 class="serif-headline text-3xl font-black text-primary mb-2">${product.name}</h1>
+              <div class="flex items-center justify-between mt-4">
+                <span class="text-3xl font-black text-secondary">${product.price} ${product.currency}</span>
+                <span class="text-xs font-bold bg-${product.availabilityColor}-container text-${product.availabilityColor} px-3 py-1 rounded-sm">${product.availability}</span>
+              </div>
+            </div>
+
+            <p class="text-on-surface-variant leading-relaxed line-clamp-4 border-b border-surface-container-high pb-6">
+              ${product.description}
+            </p>
+
+            <!-- Attributes -->
+            <div class="space-y-6 flex-grow border-b border-surface-container-high pb-6">
+              
+              <!-- Color Selection -->
+              <div>
+                <div class="flex justify-between items-center mb-3">
+                    <span class="font-bold text-sm text-on-surface-variant">اللون المختار: </span>
+                    <span class="text-sm font-bold text-primary" id="color-label">${selectedColor}</span>
+                </div>
+                <div class="flex justify-end gap-3" id="color-options">
+                    ${colorsHtml}
+                </div>
+              </div>
+
+              <!-- Size Selection -->
+              <div>
+                <div class="flex justify-between items-center mb-3">
+                    <span class="font-bold text-sm text-on-surface-variant">المقاس: </span>
+                    <a href="#" class="text-xs text-secondary underline">دليل المقاسات</a>
+                </div>
+                <div class="flex flex-wrap justify-end gap-3" id="size-options">
+                    ${sizesHtml}
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="pt-2 sticky bottom-0 bg-surface md:static pb-4 z-20 flex gap-3">
+                <button onclick="addToCart()" class="flex-1 bg-surface-container-high text-primary border border-primary/20 py-4 font-bold rounded-sm shadow-sm hover:bg-surface-container transition-all text-base flex items-center justify-center gap-2">
+                    <span class="material-symbols-outlined">add_shopping_cart</span>
+                    أضف للسلة
+                </button>
+                <button onclick="buyNow()" class="flex-1 bg-primary text-white py-4 font-bold rounded-sm shadow-xl hover:bg-primary-container transition-all text-base flex items-center justify-center gap-2">
+                    اشتري الآن
+                </button>
+            </div>
+            
+            <!-- Trust -->
+            <div class="flex items-center justify-center gap-6 mt-4 opacity-70">
+                <div class="flex items-center gap-1 text-xs"><span class="material-symbols-outlined text-sm">local_shipping</span> توصيل لجميع المدن</div>
+                <div class="flex items-center gap-1 text-xs"><span class="material-symbols-outlined text-sm">payments</span> الدفع عند الاستلام</div>
+            </div>
+
+          </div>
+        `;
+      }
+
+      // Actions
+      window.changeMainImage = (src) => {
+        currentMainImage = src;
+        render();
+      };
+
+      window.selectColor = (color) => {
+        selectedColor = color;
+        const colorObj = product.colors.find(c => c.name === color);
+        if (colorObj && colorObj.image) {
+          currentMainImage = colorObj.image;
+        }
+        render();
+      };
+
+      window.selectSize = (size) => {
+        selectedSize = size;
+        render();
+      };
+
+      window.addToCart = () => {
+        if (!selectedSize) {
+          alert('المرجو اختيار المقاس أولاً');
+          return;
+        }
+        cartManager.addItem(product, selectedSize, selectedColor);
+      };
+
+      window.buyNow = () => {
+        if (!selectedSize) {
+          alert('المرجو اختيار المقاس أولاً');
+          return;
+        }
+        cartManager.addItem(product, selectedSize, selectedColor);
+        window.location.href = 'checkout.html';
+      };
+
+      // Initial Render
+      render();
+    });
+  </script>
+</body>
+
+</html>

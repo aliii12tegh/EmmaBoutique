@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Emma Boutique | أزياء نسائية فاخرة</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&amp;family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary": "#735c00",
+              "secondary-container": "#fed488",
+              "on-error-container": "#93000a",
+              "on-background": "#1a1c19",
+              "surface": "#fafaf5",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary": "#ffffff",
+              "tertiary-fixed": "#ffe088",
+              "on-tertiary-container": "#4e3d00",
+              "background": "#fafaf5",
+              "outline-variant": "#bfc9be",
+              "on-secondary-fixed": "#261900",
+              "inverse-on-surface": "#f1f1ec",
+              "inverse-surface": "#2f312e",
+              "primary": "#004824",
+              "on-tertiary-fixed-variant": "#574500",
+              "primary-container": "#006233",
+              "surface-container": "#eeeee9",
+              "tertiary-container": "#cba72f",
+              "surface-container-high": "#e8e8e3",
+              "tertiary-fixed-dim": "#e9c349",
+              "secondary-fixed": "#ffdea5",
+              "surface-container-low": "#f4f4ef",
+              "primary-fixed-dim": "#86d89d",
+              "secondary-fixed-dim": "#e9c176",
+              "surface-container-highest": "#e3e3de",
+              "on-error": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "on-primary-fixed": "#00210d",
+              "inverse-primary": "#86d89d",
+              "on-surface": "#1a1c19",
+              "on-surface-variant": "#3f4940",
+              "error": "#ba1a1a",
+              "primary-fixed": "#a1f5b7",
+              "secondary": "#775a19",
+              "on-primary": "#ffffff",
+              "on-secondary-fixed-variant": "#5d4201",
+              "surface-dim": "#dadad5",
+              "error-container": "#ffdad6",
+              "surface-tint": "#146c3c",
+              "on-tertiary-fixed": "#241a00",
+              "surface-variant": "#e3e3de",
+              "surface-bright": "#fafaf5",
+              "on-primary-container": "#89dba0",
+              "on-secondary-container": "#785a1a",
+              "outline": "#6f7a70",
+              "on-primary-fixed-variant": "#00522a"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Be Vietnam Pro"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      body {
+        font-family: 'Be Vietnam Pro', sans-serif;
+        background-color: #fafaf5;
+        color: #1a1c19;
+      }
+      .serif-headline {
+        font-family: 'Noto Serif', serif;
+      }
+      .glass-nav {
+        background: rgba(250, 250, 245, 0.8);
+        backdrop-filter: blur(12px);
+      }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+    </style>
+</head>
+<body class="bg-surface">
+<!-- TopNavBar (Shared Component) -->
+<header class="fixed top-0 w-full z-50 bg-[#fafaf5] shadow-sm">
+<div class="flex justify-between items-center w-full px-6 py-2 max-w-7xl mx-auto">
+<div>
+<a href="#"><img src="logo.png" alt="Emma Boutique" class="h-16 scale-110 mix-blend-multiply object-contain"/></a>
+</div>
+<div class="flex items-center gap-4">
+<button onclick="window.location.href='checkout.html'" class="text-[#004824] scale-95 active:scale-90 duration-200 relative">
+<span class="material-symbols-outlined mt-1" data-icon="shopping_bag" style="font-size: 28px;">shopping_bag</span>
+<span class="cart-badge absolute -top-1 -right-1 bg-red-600 text-white text-[10px] w-5 h-5 flex items-center justify-center rounded-full font-bold transition-transform scale-100" style="display: none;">0</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[450px] md:h-[550px] flex items-center overflow-hidden bg-surface-container-low pt-12">
+<div class="absolute inset-0 z-0">
+<img alt="أزياء نسائية فاخرة مستوردة بجودة أوروبية" class="w-full h-full object-cover opacity-80" src="hero.png"/>
+<div class="absolute inset-0 bg-gradient-to-l from-surface/90 via-surface/40 to-black/20"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 w-full text-right">
+<div class="max-w-2xl mr-auto md:mr-0">
+<span class="inline-block py-1 px-4 mb-6 bg-secondary text-white text-xs font-bold tracking-widest rounded-sm">عرض اليوم الحصري</span>
+<h1 class="serif-headline text-3xl md:text-5xl font-black text-primary mb-4 leading-[1.2]">أناقة عصرية <br/> بجودة أوروبية فاخرة</h1>
+<p class="text-on-surface-variant text-base md:text-lg mb-8 font-body leading-relaxed max-w-sm ml-auto">اكتشفي أحدث تشكيلاتنا من أرقى الأزياء النسائية المستوردة مباشرة من إيطاليا وفرنسا. تصاميم حصرية تبرز جمالك وتمنحك إطلالة تخطف الأنظار.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-end">
+<a class="bg-primary text-white px-10 py-5 text-lg font-bold rounded-sm shadow-xl hover:bg-primary-container transition-all text-center" href="#products">تسوقي الآن</a>
+<div class="flex items-center justify-end gap-3 text-secondary">
+<span class="material-symbols-outlined font-bold">timer</span>
+<span class="font-bold text-sm">ينتهي العرض قريباً</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Badges -->
+<section class="bg-surface-container py-12">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+<div class="flex flex-col items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-4xl">local_shipping</span>
+<h3 class="font-bold text-primary">توصيل سريع</h3>
+<p class="text-xs text-on-surface-variant">لكل المدن المغربية</p>
+</div>
+<div class="flex flex-col items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-4xl">payments</span>
+<h3 class="font-bold text-primary">الدفع عند الاستلام</h3>
+<p class="text-xs text-on-surface-variant">خلص ملي توصلك الأمانة</p>
+</div>
+<div class="flex flex-col items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-4xl">verified</span>
+<h3 class="font-bold text-primary">جودة مضمونة</h3>
+<p class="text-xs text-on-surface-variant">ثوب وتفصال ممتاز</p>
+</div>
+<div class="flex flex-col items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-4xl">support_agent</span>
+<h3 class="font-bold text-primary">خدمة الزبناء</h3>
+<p class="text-xs text-on-surface-variant">متواجدون طيلة الأسبوع</p>
+</div>
+</div>
+</section>
+<!-- Product Grid Section -->
+<section class="py-24 max-w-7xl mx-auto px-8" id="products">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<div class="text-right w-full">
+<h2 class="serif-headline text-4xl font-black text-primary mb-4">تشكيلتنا المختارة</h2>
+<p class="text-on-surface-variant">أحدث التصاميم التي وصلت متجرنا هذا الأسبوع</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12" id="homepage-products-grid">
+<!-- Products will be injected here by Javascript -->
+</div>
+</section>
+<!-- Order Form Section Removed -->
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full mt-20 bg-[#fafaf5] border-t border-[#006233]/5 dark:bg-stone-950">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10 px-8 py-16 max-w-7xl mx-auto text-right">
+<div class="flex flex-col gap-4 text-right justify-center">
+<img src="logo.png" alt="Emma Boutique" class="h-20 mix-blend-multiply object-contain scale-110 ml-auto"/>
+<div class="flex gap-4 justify-end mt-2">
+<span class="material-symbols-outlined text-secondary">social_leaderboard</span>
+<span class="material-symbols-outlined text-secondary">camera_alt</span>
+</div>
+</div>
+<div class="flex flex-col gap-4 justify-center">
+<h4 class="font-bold text-primary">روابط سريعة</h4>
+<ul class="flex flex-col gap-2 font-['Be_Vietnam_Pro'] text-sm text-[#3f4940]">
+<li><a class="hover:text-[#775a19] underline-offset-4 hover:underline" href="#">سياسة الخصوصية</a></li>
+<li><a class="hover:text-[#775a19] underline-offset-4 hover:underline" href="#">شروط الاستخدام</a></li>
+<li><a class="hover:text-[#775a19] underline-offset-4 hover:underline" href="#">اتصل بنا</a></li>
+</ul>
+<p class="text-xs text-on-surface-variant font-body mt-4">جميع الحقوق محفوظة © 2024 متجرنا للملابس المغربية</p>
+</div>
+</div>
+</footer>
+<!-- Floating WhatsApp Button -->
+<div class="fixed bottom-6 right-6 z-40">
+<a href="https://wa.me/212659747282" class="w-14 h-14 bg-[#25D366] text-white rounded-full shadow-[0_4px_15px_rgba(37,211,102,0.4)] flex items-center justify-center hover:scale-110 active:scale-90 transition-transform relative border-2 border-white">
+<svg viewBox="0 0 24 24" class="w-8 h-8 fill-current">
+    <path d="M12.031 0C5.385 0 .002 5.378.002 12.023c0 2.128.555 4.204 1.611 6.035L.039 23.993l6.09-1.597c1.782.956 3.791 1.462 5.897 1.462h.004c6.646 0 12.03-5.38 12.03-12.025C24.06 5.207 18.675 0 12.031 0zm0 21.916h-.002c-1.802 0-3.568-.484-5.116-1.403l-.367-.217-3.804.997 1.018-3.71-.238-.378c-1.009-1.604-1.542-3.465-1.542-5.39C1.986 5.166 6.848.307 12.035.307c5.185 0 10.044 4.861 10.044 11.042C22.079 17.525 17.218 21.916 12.031 21.916zm5.503-7.514c-.302-.151-1.783-.88-2.062-.981-.277-.1-.479-.151-.68.151-.202.302-.779.981-.954 1.182-.177.202-.354.227-.656.076-1.528-.767-2.651-1.401-3.664-2.818-.261-.365.138-.344.577-1.22.075-.152.038-.283-.001-.433-.038-.152-.68-1.637-.932-2.243-.244-.59-.493-.51-.68-.52l-.58-.01c-.201 0-.528.076-.804.378-.276.302-1.055 1.033-1.055 2.518 0 1.485 1.082 2.919 1.233 3.12.15.202 2.129 3.25 5.158 4.557.72.311 1.282.497 1.723.636.721.229 1.378.197 1.897.119.579-.088 1.783-.728 2.035-1.432.253-.703.253-1.305.176-1.431-.075-.126-.276-.201-.578-.351z"/>
+</svg>
+</a>
+</div>
+<script src="cart.js"></script>
+<script src="products.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const grid = document.getElementById("homepage-products-grid");
+    
+    productsList.forEach(product => {
+        const badgeHtml = product.badge ? `<span class="absolute top-4 right-4 z-10 bg-${product.badgeColor} text-white px-3 py-1 text-[10px] font-bold uppercase tracking-widest">${product.badge}</span>` : '';
+        
+        grid.innerHTML += `
+        <div class="group flex flex-col gap-6 relative">
+            <div class="aspect-[3/4] overflow-hidden bg-surface-container-low rounded-md relative cursor-pointer" onclick="window.location.href='product.html?id=${product.id}'">
+                ${badgeHtml}
+                <img alt="${product.name}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="${product.mainImage}"/>
+                <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </div>
+            <div class="text-right">
+                <div class="flex justify-between items-center mb-2">
+                    <span class="text-secondary font-black text-xl">${product.price} ${product.currency}</span>
+                    <h3 class="serif-headline text-xl font-bold text-primary">${product.name}</h3>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-${product.availabilityColor} text-xs font-bold bg-${product.availabilityColor}-container px-2 py-0.5 rounded-sm">${product.availability}</span>
+                    <p class="text-on-surface-variant text-sm line-clamp-1 max-w-[60%]">${product.description}</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-2 mt-2">
+                <a href="product.html?id=${product.id}" class="bg-primary text-white py-3 font-bold text-sm rounded-sm hover:bg-primary-container transition-all flex items-center justify-center gap-2">
+                    التفاصيل والطلب
+                </a>
+                <a class="border border-primary/20 text-primary py-3 font-bold text-sm rounded-sm hover:bg-surface-container transition-all flex items-center justify-center gap-2" href="https://wa.me/212659747282?text=${encodeURIComponent('أريد طلب ' + product.name)}">
+                    <span class="material-symbols-outlined text-sm">chat</span>
+                    طلب عبر واتساب
+                </a>
+            </div>
+        </div>
+        `;
+    });
+});
+</script>
+</body></html>
