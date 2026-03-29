@@ -3,7 +3,7 @@ const productsList = [
   {
     id: 1,
     name: 'Veste de tailleur cintrée',
-    price: 250,
+    price: 249,
     currency: 'DH',
     description: 'سترة عصرية أنيقة ومريحة بجودة فاخرة، مثالية للمناسبات والإطلالة اليومية.',
     mainImage: 'product_1/veste.jpg',
@@ -26,7 +26,7 @@ const productsList = [
   {
     id: 2,
     name: 'Sweat à capuche et pantalon assorti',
-    price: 350,
+    price: 349,
     currency: 'DH',
     description: 'طقم كاجوال فائق الجودة، مريح وأنيق في نفس الوقت.',
     mainImage: 'product_2/Untitled design(1).png',
@@ -51,7 +51,7 @@ const productsList = [
   {
     id: 3,
     name: 'Pantalon large à taille élastique',
-    price: 230,
+    price: 229,
     currency: 'DH',
     description: 'سروال عريض ومريح بتصميم عصري يناسب إطلالتك اليومية.',
     mainImage: 'product_3/virtual-try-on-result(26).png',
@@ -79,7 +79,7 @@ const productsList = [
   {
     id: 4,
     name: 'Chemisier à motifs jacquard',
-    price: 220,
+    price: 219,
     currency: 'DH',
     description: 'قميص أنيق ونعوم متوفر بعدة ألوان رائعة.',
     mainImage: 'product_4/WhatsApp Image 2026-03-29 at 14.47.04.jpeg',
@@ -105,7 +105,7 @@ const productsList = [
   {
     id: 5,
     name: 'Ensemble jupe et chemisier à lavallière',
-    price: 400,
+    price: 399,
     currency: 'DH',
     description: 'طقم أنيق جداً مكون من تنورة وقميص لحضور المناسبات بإطلالة راقية.',
     mainImage: 'product_5/WhatsApp Image 2026-03-29 at 14.37.26.jpeg',
