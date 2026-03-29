@@ -14,10 +14,10 @@ const productsList = [
       'product_1/virtual-try-on-result(27).png'
     ],
     colors: [
-      { name: 'اللون 1', hex: '#333333', image: 'product_1/veste.jpg' },
-      { name: 'اللون 2', hex: '#666666', image: 'product_1/virtual-try-on-result(3).png' },
-      { name: 'اللون 3', hex: '#999999', image: 'product_1/virtual-try-on-result(5).png' },
-      { name: 'اللون 4', hex: '#CCCCCC', image: 'product_1/virtual-try-on-result(27).png' }
+      { name: 'اللون 1', hex: '#E9E4DE', image: 'product_1/veste.jpg' },
+      { name: 'اللون 2', hex: '#AFAFAF', image: 'product_1/virtual-try-on-result(3).png' },
+      { name: 'اللون 3', hex: '#ECEAE3', image: 'product_1/virtual-try-on-result(5).png' },
+      { name: 'اللون 4', hex: '#BDADA3', image: 'product_1/virtual-try-on-result(27).png' }
     ],
     sizes: ['Standard'],
     badge: 'طراز جديد',
@@ -40,11 +40,11 @@ const productsList = [
       'product_2/virtual-try-on-result(30).png'
     ],
     colors: [
-      { name: 'اللون 1', hex: '#333333', image: 'product_2/Untitled design(1).png' },
-      { name: 'اللون 2', hex: '#555555', image: 'product_2/virtual-try-on-result(14).png' },
-      { name: 'اللون 3', hex: '#777777', image: 'product_2/virtual-try-on-result(6).png' },
-      { name: 'اللون 4', hex: '#999999', image: 'product_2/virtual-try-on-result(8).png' },
-      { name: 'اللون 5', hex: '#BBBBBB', image: 'product_2/virtual-try-on-result(30).png' }
+      { name: 'اللون 1', hex: '#EEEADF', image: 'product_2/Untitled design(1).png' },
+      { name: 'اللون 2', hex: '#191610', image: 'product_2/virtual-try-on-result(14).png' },
+      { name: 'اللون 3', hex: '#C9C8C4', image: 'product_2/virtual-try-on-result(6).png' },
+      { name: 'اللون 4', hex: '#7B8FAB', image: 'product_2/virtual-try-on-result(8).png' },
+      { name: 'اللون 5', hex: '#CECC9C', image: 'product_2/virtual-try-on-result(30).png' }
     ],
     sizes: ['Standard'],
     badge: 'الأكثر طلباً',
@@ -67,11 +67,11 @@ const productsList = [
       'product_3/virtual-try-on-result(26).png'
     ],
     colors: [
-      { name: 'اللون 1', hex: '#333333', image: 'product_3/Gemini_Generated_Image_fgjc29fgjc29fgjc.png' },
-      { name: 'اللون 2', hex: '#555555', image: 'product_3/Gemini_Generated_Image_jrku8kjrku8kjrku.png' },
-      { name: 'اللون 3', hex: '#777777', image: 'product_3/Gemini_Generated_Image_rv5rgrrv5rgrrv5r.png' },
-      { name: 'اللون 4', hex: '#999999', image: 'product_3/WhatsApp Image 2026-03-29 at 15.05.07.jpeg' },
-      { name: 'اللون 5', hex: '#BBBBBB', image: 'product_3/virtual-try-on-result(26).png' }
+      { name: 'اللون 1', hex: '#DBD4C9', image: 'product_3/Gemini_Generated_Image_fgjc29fgjc29fgjc.png' },
+      { name: 'اللون 2', hex: '#B19F93', image: 'product_3/Gemini_Generated_Image_jrku8kjrku8kjrku.png' },
+      { name: 'اللون 3', hex: '#D3CFC4', image: 'product_3/Gemini_Generated_Image_rv5rgrrv5rgrrv5r.png' },
+      { name: 'اللون 4', hex: '#1B1D32', image: 'product_3/WhatsApp Image 2026-03-29 at 15.05.07.jpeg' },
+      { name: 'اللون 5', hex: '#E4E4E6', image: 'product_3/virtual-try-on-result(26).png' }
     ],
     sizes: ['Standard'],
     badge: 'حصري',
@@ -95,12 +95,12 @@ const productsList = [
       'product_4/virtual-try-on-result(24).png'
     ],
     colors: [
-      { name: 'اللون 1', hex: '#222222', image: 'product_4/WhatsApp Image 2026-03-29 at 14.47.04.jpeg' },
-      { name: 'اللون 2', hex: '#444444', image: 'product_4/WhatsApp Image 2026-03-29 at 14.51.19 (1).jpeg' },
-      { name: 'اللون 3', hex: '#666666', image: 'product_4/WhatsApp Image 2026-03-29 at 14.51.19.jpeg' },
-      { name: 'اللون 4', hex: '#888888', image: 'product_4/virtual-try-on-result(22).png' },
-      { name: 'اللون 5', hex: '#AAAAAA', image: 'product_4/virtual-try-on-result(23).png' },
-      { name: 'اللون 6', hex: '#CCCCCC', image: 'product_4/virtual-try-on-result(24).png' }
+      { name: 'اللون 1', hex: '#A2ABA6', image: 'product_4/WhatsApp Image 2026-03-29 at 14.47.04.jpeg' },
+      { name: 'اللون 2', hex: '#FBEDC6', image: 'product_4/WhatsApp Image 2026-03-29 at 14.51.19 (1).jpeg' },
+      { name: 'اللون 3', hex: '#343237', image: 'product_4/WhatsApp Image 2026-03-29 at 14.51.19.jpeg' },
+      { name: 'اللون 4', hex: '#DADEDE', image: 'product_4/virtual-try-on-result(22).png' },
+      { name: 'اللون 5', hex: '#D8D8D8', image: 'product_4/virtual-try-on-result(23).png' },
+      { name: 'اللون 6', hex: '#D8D8D8', image: 'product_4/virtual-try-on-result(24).png' }
     ],
     sizes: ['Standard'],
     badge: 'جديد',
@@ -120,8 +120,8 @@ const productsList = [
       'product_5/virtual-try-on-result(17).png'
     ],
     colors: [
-      { name: 'اللون 1', hex: '#333333', image: 'product_5/WhatsApp Image 2026-03-29 at 14.37.26.jpeg' },
-      { name: 'اللون 2', hex: '#999999', image: 'product_5/virtual-try-on-result(17).png' }
+      { name: 'اللون 1', hex: '#604438', image: 'product_5/WhatsApp Image 2026-03-29 at 14.37.26.jpeg' },
+      { name: 'اللون 2', hex: '#CBD0D1', image: 'product_5/virtual-try-on-result(17).png' }
     ],
     sizes: ['Standard'],
     badge: 'عرض خاص',
